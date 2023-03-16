@@ -15,7 +15,7 @@ char leggiLettera(){
 	return(l);
 }
 /** funzione che riceve una lettera maiuscola o minuscola e la restituisce maiuscola
-*@param lettera l dalla funzione leggiLettera()
+*@param lettera l 
 *@return lettera maiuscola
 */
 
@@ -30,7 +30,7 @@ char letteraMaiuscola(char l){
 
 int main(int argc, char *argv[]) {
 	int i,luC,luNC;                         // luC= lettere uguali, conto il numero di lettere uguali ccasing matters
-	printf("Inserire parola 1: ");
+	printf("Inserire parola 1: ");			// luNC= contatore lettere uguali ma il casing non conta
 	for(i=0;i<DIM;i++){
 		parola1[i]=leggiLettera();
 		printf("%c",parola1[i]);
