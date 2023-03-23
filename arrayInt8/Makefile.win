@@ -1,15 +1,15 @@
-# Project: arrayChar7conMenuEFunz
+# Project: arrayInt8
 # Makefile created by Dev-C++ 5.11
 
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = arrayChar7conMenuEFunz.o
-LINKOBJ  = arrayChar7conMenuEFunz.o
+OBJ      = arrayInt8.o
+LINKOBJ  = arrayInt8.o
 LIBS     = -L"Z:/Fondamenti di Programmazione/Dev-Cpp 5.11 TDM-GCC x64 4.9.2 Portable/Dev-Cpp/MinGW64/lib" -L"Z:/Fondamenti di Programmazione/Dev-Cpp 5.11 TDM-GCC x64 4.9.2 Portable/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"Z:/Fondamenti di Programmazione/Dev-Cpp 5.11 TDM-GCC x64 4.9.2 Portable/Dev-Cpp/MinGW64/include" -I"Z:/Fondamenti di Programmazione/Dev-Cpp 5.11 TDM-GCC x64 4.9.2 Portable/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"Z:/Fondamenti di Programmazione/Dev-Cpp 5.11 TDM-GCC x64 4.9.2 Portable/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"Z:/Fondamenti di Programmazione/Dev-Cpp 5.11 TDM-GCC x64 4.9.2 Portable/Dev-Cpp/MinGW64/include" -I"Z:/Fondamenti di Programmazione/Dev-Cpp 5.11 TDM-GCC x64 4.9.2 Portable/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"Z:/Fondamenti di Programmazione/Dev-Cpp 5.11 TDM-GCC x64 4.9.2 Portable/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"Z:/Fondamenti di Programmazione/Dev-Cpp 5.11 TDM-GCC x64 4.9.2 Portable/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
-BIN      = arrayChar7conMenuEFunz.exe
+BIN      = arrayInt8.exe
 CXXFLAGS = $(CXXINCS) 
 CFLAGS   = $(INCS) 
 RM       = rm.exe -f
@@ -24,5 +24,5 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-arrayChar7conMenuEFunz.o: arrayChar7conMenuEFunz.c
-	$(CC) -c arrayChar7conMenuEFunz.c -o arrayChar7conMenuEFunz.o $(CFLAGS)
+arrayInt8.o: arrayInt8.c
+	$(CC) -c arrayInt8.c -o arrayInt8.o $(CFLAGS)

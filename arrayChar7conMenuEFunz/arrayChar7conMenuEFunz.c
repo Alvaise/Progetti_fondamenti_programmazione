@@ -1,33 +1,44 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define DIM 10
-
-/**funzione che legge le lettera maiuscole e minuscole
-*@return lettera inserita maiuscola o minuscola
+#define DIM 1000
+#define SPAZIO 32
+#define INVIO 13
+/**funzione che legge le lettera maiuscole,minuscole,lo spazio o l'invio
+*utilizza la costante SPAZIO = 32 e INVIO=13
+*@return lettera inserita maiuscola o minuscola oppure SPAZIO o INVIO
 */
 char leggiLettera(){
 	char l;
 	l=getch();
-	while ((l<'A')||(l>'Z'&&l<'a')||(l>'z')){
+	while ((l<'A')&&(l!=SPAZIO)&&(l!=INVIO)||(l>'Z'&&l<'a')||(l>'z')){ 
 		l=getch();
 	}
 	return(l);
 }
 
 /**
- * funzione che usa la leggiLettera per introdurre i caratteri in un array vuoto
+ * funzione per introdurre i caratteri in un array vuoto e termina l'inserimento con invio
+ * la funzione utilizza funzione helper leggiLettere()
  * @param v vettore in cui introdurre i caratteri
  * @param dim dimensione del vettore
+ * @return il numero di caratteri della frase
+ * @modify i valori del vettore con i caratteri inseriti dall'utente
 */
-void caricaArrayChar(char v[],int dim){
+int caricaArrayChar(char v[],int dim){
 	int i;
-		printf("Inserisci lettera nell'array: ");
-	for (i = 0; i < dim; i++)
-	{
+	char lettera;
+	int nl;
+	nl=0;
+	i=0;
+	lettera=leggiLettera();
+	while(lettera!=INVIO && nl<DIM){
 		v[i]=leggiLettera();
 		printf("%c",v[i]);
-	}
-	
+		nl++;
+		lettera=leggiLettera();
+		i++;
+}
+return(nl);
 }
 
 /** stampa dei valori contenuti in un array di caratteri
@@ -88,9 +99,10 @@ void stampaArrayInv(char v[], int dim){
 }
 
 /**Stampa quante volte la lettera a occorre
+*utilizza funzione helper letteraMaiuscola()
 *@param vettore v 
 *@param dim dimensione array
-*@return cL contatore delle a 
+*@return cL contatore delle a senza tener conto del casing
 */
 int occLetteraA(char v[], int dim){
 	int i,cL;
@@ -103,7 +115,7 @@ int occLetteraA(char v[], int dim){
 	return(cL);
 }
 
-
+/* array caratteri*/
 int main(int argc, char *argv[]) {
 	char parola[DIM];
 	int s,cA;
