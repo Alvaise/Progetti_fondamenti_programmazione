@@ -4,12 +4,7 @@
 *Menu di scelta sulle azioni da compiere sull'array
 */
 void menu(){
-	int s;
-	printf("Scegliere una opzione: ");
-	scanf("%d",&s);
-	while(s!=0){
-		switch(s)
-	}
+	
 }
 /* Permettere il caricamento di un vettore
 
